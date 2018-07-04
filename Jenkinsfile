@@ -11,5 +11,10 @@ pipeline {
         bat 'call C:\\Python27\\SMS_Jenkins\\prevalidation'
       }
     }
+    stage('Initiate Migration') {
+      steps {
+        bat 'python C:\\python27\\SMS_Jenkins\\CreateReplicationJob.py'
+      }
+    }
   }
 }
