@@ -21,5 +21,10 @@ pipeline {
         bat 'python C:\\python27\\SMS_Jenkins\\cutover.py'
       }
     }
+    stage('Post Validation') {
+      steps {
+        bat 'python C:\\python27\\SMS_Jenkins\\post_Migration_Script.py'
+      }
+    }
   }
 }
