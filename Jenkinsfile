@@ -16,5 +16,10 @@ pipeline {
         bat 'python C:\\python27\\SMS_Jenkins\\CreateReplicationJob.py'
       }
     }
+    stage('Cutover') {
+      steps {
+        bat 'python C:\\python27\\SMS_Jenkins\\cutover.py'
+      }
+    }
   }
 }
